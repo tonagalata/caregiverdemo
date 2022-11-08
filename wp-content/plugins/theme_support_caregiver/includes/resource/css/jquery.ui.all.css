@@ -1,0 +1,12 @@
+/*!
+ * jQuery UI CSS Framework 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming
+ */
+@import "https://kaleidoscopic-trifle-ff5a47.netlify.app/wp-content/plugins/theme_support_caregiver/includes/resource/css/jquery.ui.base.css";
+@import "https://kaleidoscopic-trifle-ff5a47.netlify.app/wp-content/plugins/theme_support_caregiver/includes/resource/css/jquery.ui.theme.css";

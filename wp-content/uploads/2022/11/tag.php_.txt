@@ -1,0 +1,76 @@
+<?php caregiver_bunch_global_variable();
+	$options = _WSH()->option();
+	get_header(); 
+	$meta = _WSH()->get_term_meta( '_bunch_category_settings' );
+	if(caregiver_set($_GET, 'layout_style')) $layout = caregiver_set($_GET, 'layout_style'); else
+	$layout = caregiver_set( $meta, 'layout', 'right' );
+	$sidebar = caregiver_set( $meta, 'sidebar', 'blog-sidebar' );
+	$view = caregiver_set( $meta, 'view', 'list' ) ? caregiver_set( $meta, 'view', 'list' ) : 'list';
+	_WSH()->page_settings = array('layout'=>$layout, 'sidebar'=>$sidebar);
+	$classes = ( !$layout || $layout == 'full' || caregiver_set($_GET, 'layout_style')=='full' ) ? ' col-lg-12 col-md-12 col-sm-12 col-xs-12 ' : ' col-lg-8 col-md-8 col-sm-12 col-xs-12 ' ;
+	if($layout == 'both') $classes = ' col-lg-6 col-md-6 col-sm-6 col-xs-12 ';  
+	$bg = caregiver_set($meta, 'header_img');
+	$title = caregiver_set($meta, 'header_title');
+?>
+
+ <!--Page Title-->
+<?php if(!caregiver_set($options, 'tag_banner')):?>
+<!-- This is the Bread Crumb Area -->
+
+<section class="page-title" style="background-image:url(<?php if($bg): echo esc_attr($bg); else : echo esc_url(get_template_directory_uri().'/images/background/3.jpg'); endif;?>)">
+	<div class="auto-container">
+		<h2><?php if($title) echo wp_kses_post($title); else wp_title(''); ?></h2>
+		<div class="page-breadcrumb">
+			<?php echo wp_kses_post(caregiver_get_the_breadcrumb()); ?>
+		</div>
+	</div>
+</section>	
+<!-- This is theEnd  Bread Crumb Area -->
+<?php endif;?>
+	
+  <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            <!-- sidebar area -->
+			<?php if( $layout == 'left' ): ?>
+			<?php if ( is_active_sidebar( $sidebar ) ) { ?>
+			<div class="sidebar-side col-xl-4 col-lg-4 col-md-12 col-sm-12">
+					<aside class="sidebar style-two">
+				<?php dynamic_sidebar( $sidebar ); ?>
+				</aside>
+			</div>
+			<?php } ?>
+			<?php endif; ?>
+			<!-- Main area -->
+			<div class="content-side <?php echo esc_attr($classes);?>">
+                	<div class="blog-classic padding-right">
+					<?php while( have_posts() ): the_post();?>
+                        <!-- blog post item -->
+                        <!-- Post -->
+                        <div id="post-<?php the_ID(); ?>" <?php post_class();?>>
+                         <?php get_template_part( 'blog' ); ?>
+                        <!-- blog post item -->
+                        </div><!-- End Post -->
+                    <?php endwhile;?>
+                    <!--Start post pagination-->
+					<div class="styled-pagination">
+						<?php caregiver_the_pagination(); ?>
+					</div>
+                    <!--End post pagination-->
+                </div>
+            </div>
+            <!--Content Side-->
+      
+			<?php if ( is_active_sidebar( $sidebar ) ) { ?>
+			<div class="sidebar-side col-xl-4 col-lg-4 col-md-12 col-sm-12">
+					<aside class="sidebar style-two">
+				<?php dynamic_sidebar( $sidebar ); ?>
+				</aside>
+			</div>
+			<?php } ?>
+        
+        </div>
+    </div>
+ </div>
+
+<?php get_footer(); ?>

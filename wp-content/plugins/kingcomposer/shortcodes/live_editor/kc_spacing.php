@@ -1,0 +1,1 @@
+<div class="{{{el_class.join(' ')}}}" style="height: {{{height}}}px; clear: both; width:100%;"></div>
