@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -123,7 +124,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mb-5">
-            <form action="#">
+            <form name="contact" method="POST" data-netlify="true">
 
 
               <div class="row form-group">
@@ -166,7 +167,7 @@
                 </div>
               </div>
 
-
+              <input type="hidden" name="form-name" value="contact">
             </form>
           </div>
           <div class="col-lg-3 ml-auto">
@@ -266,6 +267,25 @@
   <script src="js/main.js"></script>
 
 
+<script>
+  const handleSubmit = (event) => {
+  event.preventDefault();
 
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+</script>
 </body>
 </html>
