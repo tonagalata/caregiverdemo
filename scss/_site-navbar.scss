@@ -402,14 +402,15 @@
 			}
 		}
 		.site-menu {
-			> li {
+			// > li {
 				> a {
+					
 					color: rgba($white, .7)!important;
 					&:hover, &.active {
 						color: $white!important;
 					}
 				}
-			}
+			// }
 		}
 	}	
 	&.is-sticky {
@@ -427,14 +428,14 @@
 				}
 			}
 			.site-menu {
-				> li {
+				// > li {
 					> a {
 						color: $black!important;
 						&:hover, &.active {
 							color: $primary!important;
 						}
 					}
-				}
+				// }
 			}
 		}
 	}
