@@ -119,7 +119,7 @@
           <div class="col-lg-8 mb-5">
             <h2 style="text-align: center;">JOIN OUR TEAM</h2>
             <hr>
-            <form id="career-form" name="career" method="POST" data-netlify-recaptcha="true"  data-netlify="true">
+            <!-- <form id="career-form" name="career" method="POST" data-netlify-recaptcha="true"  data-netlify="true">
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="text-black" for="fname">First Name</label>
@@ -177,7 +177,67 @@
               </div>
 
               <input type="hidden" name="form-name" value="contact">
-            </form>
+            </form> -->
+            <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="text-black" for="fname">First Name</label>
+                      <input type="text" id="fname" class="form-control" name="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="text-black" for="lname">Last Name</label>
+                      <input type="text" id="lname" class="form-control" name="lastName" required>
+                    </div>
+                  </div>
+    
+                  <div class="row form-group">
+    
+                    <div class="col-md-12">
+                      <label class="text-black" for="email">Email</label> 
+                      <input type="email" id="email" class="form-control" name="email" required>
+                    </div>
+                  </div>
+    
+                  <div class="row form-group">
+    
+                    <div class="col-md-12">
+                      <label class="text-black" for="subject">Subject</label> 
+                      <input type="subject" id="subject" class="form-control" name="subject" required>
+                    </div>
+                  </div>
+    
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-black" for="subject">*Upload Resume/CV</label> 
+                        <input class="form-control" name="file" type="file" required />
+                    </div>
+                  </div>
+    
+                  
+    
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <label class="text-black" for="message">Message</label> 
+                      <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..." required></textarea>
+                    </div>
+                  </div>
+    
+    
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
+                  </div>
+    
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <button type="submit" class="btn btn-primary text-white">Send Message</button>
+                    </div>
+                  </div>
+              </form>
+              <p class="result"></p>
+
+
           </div>
           <div class="col-lg-3 ml-auto">
             <div class="mb-3">
@@ -258,26 +318,42 @@
 
 
 <script>
-  const handleSubmitCareer = (event) => {
-  event.preventDefault();
+//   const handleSubmitCareer = (event) => {
+//   event.preventDefault();
 
-  const myCareerForm = event.target;
-  const formDataCareer = new FormData(myCareerForm);
+//   const myCareerForm = event.target;
+//   const formDataCareer = new FormData(myCareerForm);
   
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formDataCareer).toString(),
-  })
-    .then(() => alert("Form successfully submitted"))
-    .catch((error) => alert(error));
+//   fetch("/", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//     body: new URLSearchParams(formDataCareer).toString(),
+//   })
+//     .then(() => alert("Form successfully submitted"))
+//     .catch((error) => alert(error));
 
-    myCareerForm.reset()
-};
+//     myCareerForm.reset()
+// };
 
-document
-  .querySelector("#career-form")
-  .addEventListener("submit", handleSubmitCareer);
+// document
+//   .querySelector("#career-form")
+//   .addEventListener("submit", handleSubmitCareer);
+    document.forms.fileForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const result = document.querySelector(".result");
+    fetch("/", {
+        body: new FormData(event.target),
+        method: "POST",
+    })
+        .then(() => {
+        result.innerText = "Success";
+        alert(result.innerText)
+        })
+        .catch((error) => {
+        result.innerText = `Failed: ${error}`;
+        alert(result.innerText)
+        });
+    });
 </script>
 </body>
 </html>
