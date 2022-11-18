@@ -258,26 +258,26 @@
 
 
 <script>
-  const handleSubmit = (event) => {
+  const handleSubmitCareer = (event) => {
   event.preventDefault();
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+  const myCareerForm = event.target;
+  const formDataCareer = new FormData(myCareerForm);
   
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+    body: new URLSearchParams(formDataCareer).toString(),
   })
-    .then(() => console.log("Form successfully submitted"))
+    .then(() => alert("Form successfully submitted"))
     .catch((error) => alert(error));
 
-  myForm.reset()
+    myCareerForm.reset()
 };
 
 document
   .querySelector("#career-form")
-  .addEventListener("submit", handleSubmit);
+  .addEventListener("submit", handleSubmitCareer);
 </script>
 </body>
 </html>
