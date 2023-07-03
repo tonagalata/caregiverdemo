@@ -299,7 +299,7 @@ body:after {
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active {
-      color: #4d784d;
+      color: #fff;
       display: inline-block;
       padding: 20px 20px; }
     .site-navbar .site-navigation .site-menu a {
@@ -309,7 +309,7 @@ body:after {
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > a {
         padding: 20px 20px;
-        color: #000;
+        color: #fff;
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > a:hover {
@@ -585,7 +585,12 @@ body:after {
     .sticky-wrapper.is-sticky .site-navbar .site-menu-toggle {
       color: #000; }
     .sticky-wrapper.is-sticky .site-navbar .site-logo a {
-      color: #000; }
+      color: #000; 
+    }
+    .sticky-wrapper.is-sticky .site-navbar .site-menu a {
+      color: #000; 
+    }
+
     .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a {
       color: #000 !important; }
       .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover, .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active {
