@@ -1,44 +1,33 @@
 <!doctype html>
 <html lang="en">
-<head id="head-content"></head>
+<head>
+  <title>Healing Holistically</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  <script>
-    async function loadComponents() {
-      try {
-        // Load the head content first
-        const headResponse = await fetch('components/head.html');
-        if (headResponse.ok) {
-          const headContent = await headResponse.text();
-          document.getElementById('head-content').innerHTML = headContent;
-        } else {
-          console.error('Failed to load head content');
-        }
 
-        // Load the main content
-        const mainResponse = await fetch('components/services.html');
-        if (mainResponse.ok) {
-          const mainContent = await mainResponse.text();
-          document.getElementById('main-content').innerHTML = mainContent;
-        } else {
-          console.error('Failed to load main content');
-        }
-
-        // Load the footer content
-        const footerResponse = await fetch('components/footer.html');
-        if (footerResponse.ok) {
-          const footerContent = await footerResponse.text();
-          document.getElementById('footer-content').innerHTML = footerContent;
-        } else {
-          console.error('Failed to load footer content');
-        }
-      } catch (error) {
-        console.error('Error loading components:', error);
-      }
-    }
-
-    // Execute the component loading function
-    loadComponents();
-  </script>
 
   <div id="overlayer"></div>
   <div class="loader">
@@ -46,6 +35,7 @@
       <span class="sr-only">Loading...</span>
     </div>
   </div>
+
 
   <div class="site-wrap">
 
@@ -64,16 +54,27 @@
       <div class="container">
         <div class="row align-items-center">
 
-          <div class="col-6 col-xl-2">
-            <div class="mb-0 site-logo" style="width: 200px;">
-              <a href="index.html" class="mb-0">
-                  Amazing Life LLC<span class="text-secondary" style="font-size: 2rem; color: #e1a9f6 !important">.</span>
-              </a>
-            </div>
+          <div class="col-12 col-xl-2">
+            <div class="mb-0 site-logo" style="width: 200px;"><a href="index.html" class="mb-0">Healing Holistically<span class="text-primary">.</span> </a></div>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <!-- <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"> -->
+                <!-- <li><a href="index.html" class="nav-link">Home</a></li>
+                <li>
+                  <a href="services.html" class="active nav-link">Services</a>
+                </li> -->
+                <!-- <li><a href="testimonial.html" class="nav-link">Testimonials</a></li> -->
+
+
+                <!-- <li><a href="blog.html" class="nav-link">Blog</a></li> -->
+                <!-- <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+
+              </ul> -->
               <div class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <a href="index.html" class="active nav-link">Home</a>
                 <a href="services.html" class="nav-link">Services</a>
@@ -100,19 +101,207 @@
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6 align-self-center">
-            <h1 class="heading mb-3">Our Group Home Services</h1>
-            <p class="lead text-white mb-5">Dedicated to Providing a Safe and Supportive Environment</p>
+            <h1 class="heading mb-3">Our Wellbeing Services</h1>
+            <p class="lead text-white mb-5">Holistic Professional Services That Focus On the Mind &amp; the Body</p>
             <p><a href="/contact.html" class="btn btn-primary">Get In Touch</a></p>
           </div>
         </div>
       </div>  
-    </div>    
+    </div>
 
 
 
 
-    <main id="main-content"></main>
-    <footer id="footer-content"></footer>
+    <div class="site-section">
+      
+      <div class="container">
+        <small class="d-block text-uppercase font-weight-bold mb-3">
+          <em>*We accept Community Alternatives for Disabled Individuals (CADI), Developmental Disabilities (DD), Community Alternative Care (CAC), Brain Injury (BI), Alternative Care (AC), and Elderly Waiver (EW) programs. We also accept Private Pay.</em>
+        </small>
+        
+
+
+        <div class="row mb-4">
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/errands_shopping.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Individual Community Living Support</h3>
+                <p>Comprensive individual community living support</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/24_hour_support.jpeg" alt="Image" class="img-fluid"
+                ></a>
+              <div class="service-inner">
+                <h3>24-hour Emergency Assistance</h3>
+                <p>24-hour emergency assistance</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/night_supervision.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Night Supervision</h3>
+                <p>Overnight supervision</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="row mb-4">
+
+          
+
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/housekeeping_cleaning.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Homemaker Services</h3>
+                <p>Light Housekeeping and Cleaning</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/walking_assist.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Adult Companion Services</h3>
+                <p>Companionship and Conversation</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/independent_living_skills.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Individualized Home Supports Without Training</h3>
+                <p>Individualized Home Supports Without Training</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mb-4">
+
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/senior_haircut.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Grooming Assistance</h3>
+                <p>Bathing, Dressing and Grooming Assistance</p>
+                <div>
+                  <div>
+                    <span class="btn btn-primary"
+                      style="background-color: #f9a825; border-color: #f9a825; color: #fff; font-weight: 600;">Private Pay</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/older_yoga.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Yoga Services</h3>
+                <p>Physical Yoga Classes</p>
+                <div>
+                  <div>
+                    <span class="btn btn-primary"
+                      style="background-color: #f9a825; border-color: #f9a825; color: #fff; font-weight: 600;">Private Pay</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 mb-4 mb-lg-0 col-lg-4">
+            <div class="service" style="border: 1px solid #b4b4b4; cursor: pointer;">
+              <a href="/contact.html" class="d-block"><img src="images/aromatherapy.jpeg" alt="Image" class="img-fluid"></a>
+              <div class="service-inner">
+                <h3>Aromatherapy</h3>
+                <p>Aromatherapy sessions</p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class="site-section bg-primary">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-12 col-lg-6 mb-5 mb-md-0">
+            <img src="images/about2.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-12 col-lg-5 ml-auto">
+            <div class="section-heading">
+              <h2 class="heading mb-3 text-white">Senior &amp; Elder Home Care Center</h2>
+              
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique amet nostrum facere hic! Inventore cumque ipsam eum, sit sequi illum.</p>
+              <p class="mb-4 text-white">Optio ex ullam eveniet magnam molestiae laborum, dignissimos dolorum ipsam minus, ipsum vel illo aut molestias suscipit voluptatem hic voluptatibus!</p>
+              <p class="text-white mb-5"><strong class="h3">&ldquo;We care for elderly people&rdquo;</strong></p>
+              <p><a href="#" class="btn btn-white">Learn More</a></p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="site-footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="footer-heading mb-4">About</h2>
+            <p>Healing Holistically Home Health That Cares. <br/> <span style="font-weight: 550;">MENTAL HEALTH AND WELLBEING PARTNER</span></p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row" style="display:flex; justify-content: end;">
+              <div class="col-lg-4">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="/services.html">Amazing Atmosphere</a></li>
+                  <li><a href="/careers.html">Careers</a></li>
+                  <li><a href="/about.html">About Us</a></li>
+                  <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p class="copyright"><small>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Healing Holistically
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
   </div> <!-- .site-wrap -->
